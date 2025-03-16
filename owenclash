@@ -1,0 +1,626 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+  fallback:
+  - 8.8.8.8
+  - 8.8.4.4
+  - tls://1.0.0.1:853
+  - tls://dns.google:853
+proxies:
+- name: "甲骨文-春川A"
+  type: vless
+  server: 144.24.79.164
+  port: 25560
+  uuid: 13918604-ccc4-42a6-9e72-399aeced188d
+  network: tcp
+  udp: false
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.icloud.com
+  reality-opts:
+    public-key: qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY
+    short-id: "1d"
+  fingerprint: chrome
+- name: Pixel-宿舍
+  type: socks5
+  server: 192.168.31.72
+  port: 10800
+- name: Pixel-工位
+  type: socks5
+  server: 192.168.200.191
+  port: 10800
+- name: Pixel-HOME
+  type: socks5
+  server: 192.168.31.92
+  port: 1080
+- name: Pixel-LGJ
+  type: socks5
+  server: 192.168.200.89
+  port: 10800
+- name: 🇨🇳 CN-上海游戏节点
+  server: 124.220.57.75
+  port: 80
+  client-fingerprint: chrome
+  type: vmess
+  uuid: 937136de-0743-4b63-a367-e0ed39d0c5f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tms.dingtalk.com
+  udp: true
+- name: 🇨🇳 CN-北京游戏节点
+  server: 140.143.147.227
+  port: 80
+  client-fingerprint: chrome
+  type: vmess
+  uuid: 937136de-0743-4b63-a367-e0ed39d0c5f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tms.dingtalk.com
+  udp: true
+- name: 🇨🇳 CN-浙江BGP
+  server: nb.xn--wlqw1swrj04ju56d.com
+  port: 80
+  client-fingerprint: chrome
+  type: vmess
+  uuid: 937136de-0743-4b63-a367-e0ed39d0c5f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tms.dingtalk.com
+  udp: true
+- name: 🇨🇳 CN-河南移动
+  server: hn.xn--wlqw1swrj04ju56d.com
+  port: 80
+  client-fingerprint: chrome
+  type: vmess
+  uuid: 937136de-0743-4b63-a367-e0ed39d0c5f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tms.dingtalk.com
+  udp: true
+- name: 🇨🇳 CN-四川BGP
+  server: sc.xn--wlqw1swrj04ju56d.com
+  port: 80
+  client-fingerprint: chrome
+  type: vmess
+  uuid: 937136de-0743-4b63-a367-e0ed39d0c5f3
+  alterId: 0
+  cipher: auto
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tms.dingtalk.com
+  udp: true
+- type: vless
+  name: 一桐のcloudflare优选节点-A
+  server: 69.48.218.208
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-B
+  server: 162.159.153.255
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-C
+  server: 162.159.153.50
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-D
+  server: 104.19.35.145
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-E
+  server: 172.64.106.113
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-F
+  server: 104.18.99.80
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-G
+  server: 104.19.37.65
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐のcloudflare优选节点-H
+  server: 162.159.152.179
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐の自动优选-A
+  server: visa.cn
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐の自动优选-B
+  server: wto.org
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- type: vless
+  name: 一桐の自动优选-C
+  server: linux.do
+  port: 2086
+  uuid: 15d28e91-90bf-42c4-9cb5-9e8ee67b5409
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a1.ikc9pr47.workers.dev
+  sni: a1.ikc9pr47.workers.dev
+- name: 家-内网
+  type: vless
+  server: ytmc.fun
+  port: 11451
+  uuid: 22a9135d-ed0f-4620-85dd-66f2a3395c7d
+  alterId: 64
+  cipher: auto
+  network: tcp
+  tls: false
+proxy-groups:
+- name: ✊手动挡
+  type: select
+  proxies:
+  - DIRECT
+  - 甲骨文-春川A
+  - Pixel-宿舍
+  - Pixel-工位
+  - Pixel-LGJ
+  - Pixel-HOME
+  - 一桐のcloudflare优选节点-A
+  - 一桐のcloudflare优选节点-B
+  - 一桐のcloudflare优选节点-C
+  - 一桐のcloudflare优选节点-D
+  - 一桐のcloudflare优选节点-E
+  - 一桐のcloudflare优选节点-F
+  - 一桐のcloudflare优选节点-G
+  - 一桐のcloudflare优选节点-H
+  - 一桐の自动优选-A
+  - 一桐の自动优选-B
+  - 一桐の自动优选-C
+- name: 📺Bilibili分流
+  type: select
+  proxies:
+  - DIRECT
+  - 家-内网
+  - 一桐の自动优选-A
+  - 一桐の自动优选-B
+  - 一桐の自动优选-C
+  - 一桐のcloudflare优选节点-A
+  - 一桐のcloudflare优选节点-B
+  - 一桐のcloudflare优选节点-C
+  - 一桐のcloudflare优选节点-D
+  - 一桐のcloudflare优选节点-E
+  - 一桐のcloudflare优选节点-F
+  - 一桐のcloudflare优选节点-G
+  - 一桐のcloudflare优选节点-H
+  - 🇨🇳 CN-四川BGP
+  - 🇨🇳 CN-河南移动
+  - 🇨🇳 CN-浙江BGP
+  - 🇨🇳 CN-北京游戏节点
+  - 🇨🇳 CN-上海游戏节点
+- name: 🎵网易云音乐分流
+  type: select
+  proxies:
+  - DIRECT
+  - 家-内网
+  - 一桐の自动优选-A
+  - 一桐の自动优选-B
+  - 一桐の自动优选-C
+  - 一桐のcloudflare优选节点-A
+  - 一桐のcloudflare优选节点-B
+  - 一桐のcloudflare优选节点-C
+  - 一桐のcloudflare优选节点-D
+  - 一桐のcloudflare优选节点-E
+  - 一桐のcloudflare优选节点-F
+  - 一桐のcloudflare优选节点-G
+  - 一桐のcloudflare优选节点-H
+  - 🇨🇳 CN-四川BGP
+  - 🇨🇳 CN-河南移动
+  - 🇨🇳 CN-浙江BGP
+  - 🇨🇳 CN-北京游戏节点
+  - 🇨🇳 CN-上海游戏节点
+- name: 🥵抖音分流
+  type: select
+  proxies:
+  - DIRECT
+  - 家-内网
+  - 一桐の自动优选-A
+  - 一桐の自动优选-B
+  - 一桐の自动优选-C
+  - 一桐のcloudflare优选节点-A
+  - 一桐のcloudflare优选节点-B
+  - 一桐のcloudflare优选节点-C
+  - 一桐のcloudflare优选节点-D
+  - 一桐のcloudflare优选节点-E
+  - 一桐のcloudflare优选节点-F
+  - 一桐のcloudflare优选节点-G
+  - 一桐のcloudflare优选节点-H
+  - 🇨🇳 CN-四川BGP
+  - 🇨🇳 CN-河南移动
+  - 🇨🇳 CN-浙江BGP
+  - 🇨🇳 CN-北京游戏节点
+  - 🇨🇳 CN-上海游戏节点
+- name: 🛒阿里系分流
+  type: select
+  proxies:
+  - DIRECT
+  - 家-内网
+  - 🇨🇳 CN-四川BGP
+  - 🇨🇳 CN-河南移动
+  - 🇨🇳 CN-浙江BGP
+  - 🇨🇳 CN-北京游戏节点
+  - 🇨🇳 CN-上海游戏节点
+rules:
+- DOMAIN-SUFFIX,steamcontent.com,DIRECT
+- DOMAIN-SUFFIX,steamstatic.com,DIRECT
+- DOMAIN-SUFFIX,google.com,✊手动挡
+- DOMAIN-KEYWORD,youtube,✊手动挡
+- DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com,📺Bilibili分流
+- DOMAIN,0gr5dgmttgha1hcj38yzdncb3.ourdvsss.com,📺Bilibili分流
+- DOMAIN,112-81-125-43.dhost.00cdn.com,📺Bilibili分流
+- DOMAIN,113-219-145-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,114-236-92-129.ksyungslb.com,📺Bilibili分流
+- DOMAIN,180-101-74-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,passport.bilicomic.com,📺Bilibili分流
+- DOMAIN,beacons.gcp.gvt2.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilivideo.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bilivideo.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilivideo.net,📺Bilibili分流
+- DOMAIN,1geadrmttge3nhcjwgazdope.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdkpe.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdkpy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj38yzdkqy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj3gczdcpa.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj3gczdcpe.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj3gczdcpo.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcj3gczdcqy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1gr5dgmttgha1hcttgrzdnpo.ourdvsss.com,📺Bilibili分流
+- DOMAIN,1graukmttga4nhcjtgozdgce.ourdvsss.com,📺Bilibili分流
+- DOMAIN,218-91-225-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,219-155-150-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,222-188-6-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,36-104-134-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,36-25-252-1.ksyungslb.com,📺Bilibili分流
+- DOMAIN,3ge3drmttga5nhcbqge3ur.ourdvsss.com,📺Bilibili分流
+- DOMAIN,3geauymtsgrzdnqbofa5do.ourdvsss.com,📺Bilibili分流
+- DOMAIN,3geauymtsgrzdnqbofa5dy.ourdvsss.com,📺Bilibili分流
+- DOMAIN,3geauymtsgrzdrcbzfahue.ourdvsss.com,📺Bilibili分流
+- DOMAIN,3geauymtsgrzdrcbzfahuk.ourdvsss.com,📺Bilibili分流
+- DOMAIN,4go41hcjtgazdoctqge4o.ourdvsss.com,📺Bilibili分流
+- DOMAIN,p-bstarstatic.akamaized.net,📺Bilibili分流
+- DOMAIN,p.bstarstatic.com,📺Bilibili分流
+- DOMAIN,upos-bstar-mirrorakam.akamaized.net,📺Bilibili分流
+- DOMAIN,upos-bstar1-mirrorakam.akamaized.net,📺Bilibili分流
+- DOMAIN-SUFFIX,acg.tv,📺Bilibili分流
+- DOMAIN-SUFFIX,acgvideo.com,📺Bilibili分流
+- DOMAIN-SUFFIX,animetamashi.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,animetamashi.com,📺Bilibili分流
+- DOMAIN-SUFFIX,anitama.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,anitama.net,📺Bilibili分流
+- DOMAIN-SUFFIX,b23.tv,📺Bilibili分流
+- DOMAIN-SUFFIX,baka.im,📺Bilibili分流
+- DOMAIN-SUFFIX,bigfun.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bigfunapp.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bili22.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bili2233.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bili23.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bili33.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,biliapi.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biliapi.net,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.cc,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.co,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.net,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibili.tv,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibiligame.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibiligame.co,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibiligame.net,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibilipay.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,bilibilipay.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicdn1.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicdn2.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicdn3.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicdn4.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicdn5.com,📺Bilibili分流
+- DOMAIN-SUFFIX,bilicomics.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biligame.cn,📺Bilibili分流
+- DOMAIN-SUFFIX,biligame.co,📺Bilibili分流
+- DOMAIN-SUFFIX,biligame.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biligame.net,📺Bilibili分流
+- DOMAIN-SUFFIX,biligo.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biliimg.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biliintl.com,📺Bilibili分流
+- DOMAIN-SUFFIX,biliplus.com,📺Bilibili分流
+- DOMAIN-SUFFIX,corari.com,📺Bilibili分流
+- DOMAIN-SUFFIX,dreamcast.hk,📺Bilibili分流
+- DOMAIN-SUFFIX,dyhgames.com,📺Bilibili分流
+- DOMAIN-SUFFIX,hdslb.com,📺Bilibili分流
+- DOMAIN-SUFFIX,hdslb.com.w.kunlunhuf.com,📺Bilibili分流
+- DOMAIN-SUFFIX,hdslb.com.w.kunlunpi.com,📺Bilibili分流
+- DOMAIN-SUFFIX,hdslb.net,📺Bilibili分流
+- DOMAIN-SUFFIX,hdslb.org,📺Bilibili分流
+- DOMAIN-SUFFIX,im9.com,📺Bilibili分流
+- DOMAIN-SUFFIX,maoercdn.com,📺Bilibili分流
+- DOMAIN-SUFFIX,mcbbs.net,📺Bilibili分流
+- DOMAIN-SUFFIX,mincdn.com,📺Bilibili分流
+- DOMAIN-SUFFIX,sharejoytech.com,📺Bilibili分流
+- DOMAIN-SUFFIX,smtcdns.net,📺Bilibili分流
+- DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net,📺Bilibili分流
+- DOMAIN-SUFFIX,uposdash-302-bilivideo.yfcdn.net,📺Bilibili分流
+- DOMAIN-SUFFIX,yo9.com,📺Bilibili分流
+- IP-CIDR,106.75.74.76/32,📺Bilibili分流
+- IP-CIDR,111.206.25.147/32,📺Bilibili分流
+- IP-CIDR,119.3.238.64/32,📺Bilibili分流
+- IP-CIDR,120.92.108.182/32,📺Bilibili分流
+- IP-CIDR,120.92.113.99/32,📺Bilibili分流
+- IP-CIDR,120.92.153.217/32,📺Bilibili分流
+- IP-CIDR,134.175.207.130/32,📺Bilibili分流
+- IP-CIDR,203.107.1.0/24,📺Bilibili分流
+- PROCESS-NAME,com.bilibili.app.blue,📺Bilibili分流
+- PROCESS-NAME,com.bilibili.app.in,📺Bilibili分流
+- PROCESS-NAME,com.bilibili.comic,📺Bilibili分流
+- PROCESS-NAME,com.bilibili.comic.intl,📺Bilibili分流
+- PROCESS-NAME,tv.danmaku.bili,📺Bilibili分流
+- PROCESS-NAME,tv.danmaku.bilibilihd,📺Bilibili分流
+- DOMAIN-SUFFIX,music.126.net,🎵网易云音乐分流
+- DOMAIN-SUFFIX,music.163.com,🎵网易云音乐分流
+- DOMAIN-SUFFIX,man.netease.com,🎵网易云音乐分流
+- PROCESS-NAME,cloudmusic.exe,🎵网易云音乐分流
+- PROCESS-NAME,com.netease.cloudmusic,🎵网易云音乐分流
+- DOMAIN,*.zijieapi.com,🥵抖音分流
+- DOMAIN-KEYWORD,zijie,🥵抖音分流
+- DOMAIN,*.douyin.com,🥵抖音分流
+- DOMAIN,www.douyin.com,🥵抖音分流
+- DOMAIN,lf3-static.bytednsdoc.com,🥵抖音分流
+- DOMAIN,v5-dy-o-abtest.zjcdn.com,🥵抖音分流
+- DOMAIN-SUFFIX,amemv.com,🥵抖音分流
+- DOMAIN-SUFFIX,douyincdn.com,🥵抖音分流
+- DOMAIN-SUFFIX,douyinpic.com,🥵抖音分流
+- DOMAIN-SUFFIX,douyinstatic.com,🥵抖音分流
+- DOMAIN-SUFFIX,douyinvod.com,🥵抖音分流
+- DOMAIN-SUFFIX,idouyinvod.com,🥵抖音分流
+- DOMAIN-SUFFIX,ixigua.com,🥵抖音分流
+- DOMAIN-SUFFIX,ixiguavideo.com,🥵抖音分流
+- DOMAIN-SUFFIX,pstatp.com,🥵抖音分流
+- DOMAIN-SUFFIX,snssdk.com,🥵抖音分流
+- DOMAIN-SUFFIX,toutiao.com,🥵抖音分流
+- DOMAIN,*.douyin.com,🥵抖音分流
+- DOMAIN,*.bytetos.com,🥵抖音分流
+- DOMAIN-KEYWORD,bytedance,🥵抖音分流
+- DOMAIN-KEYWORD,douyin,🥵抖音分流
+- DOMAIN-KEYWORD,byteimg,🥵抖音分流
+- DOMAIN-SUFFIX,apoll.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,agoodm.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,ai.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,ai.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,api.waptest.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,dsp.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,fav.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,m.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,mclick.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,re.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,re.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,redirect.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,simba.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,srd.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,temai.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,textlink.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,unitacs.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,w.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,adashbc.ut.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,adash-c.ut.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,adashxgc.ut.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,adashx4yt.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,h-adashx.ut.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,tunion-api.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,tns.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,click.mz.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,click.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,click.tz.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,stat.simba.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,m-adash.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,adashbc.m.taobao.com,🛒阿里系分流
+- DOMAIN-SUFFIX,taobao.com,🛒阿里系分流
+- DOMAIN,e.tb.cn,🛒阿里系分流
+- DOMAIN,localhost,DIRECT
+- DOMAIN,127.0.0.1,DIRECT
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-KEYWORD,Thunder,DIRECT
+- DOMAIN-KEYWORD,XLLiveUD,DIRECT
+- DOMAIN-KEYWORD,aria2,DIRECT
+- DOMAIN-KEYWORD,thunder,DIRECT
+- DOMAIN-KEYWORD,xlliveud,DIRECT
+- DOMAIN-KEYWORD,xunlei,DIRECT
+- DOMAIN-KEYWORD,yunpan,DIRECT
+- DOMAIN-SUFFIX,qbittorrent.org,DIRECT
+- DOMAIN-SUFFIX,smtp,DIRECT
+- PROCESS-NAME,OneDrive,DIRECT
+- PROCESS-NAME,BitComet,DIRECT
+- PROCESS-NAME,BitComet.exe,DIRECT
+- PROCESS-NAME,BitComet_x64.exe,DIRECT
+- PROCESS-NAME,DownloadService,DIRECT
+- PROCESS-NAME,DownloadService.exe,DIRECT
+- PROCESS-NAME,Folx,DIRECT
+- PROCESS-NAME,Folx.exe,DIRECT
+- PROCESS-NAME,Motrix.app,DIRECT
+- PROCESS-NAME,NetTransport,DIRECT
+- PROCESS-NAME,NetTransport.exe,DIRECT
+- PROCESS-NAME,Thunder,DIRECT
+- PROCESS-NAME,Thunder.exe,DIRECT
+- PROCESS-NAME,ThunderVIP.exe,DIRECT
+- PROCESS-NAME,Transmission,DIRECT
+- PROCESS-NAME,Transmission.exe,DIRECT
+- PROCESS-NAME,WebTorrent Helper.exe,DIRECT
+- PROCESS-NAME,WebTorrent,DIRECT
+- PROCESS-NAME,WebTorrent.exe,DIRECT
+- PROCESS-NAME,WebTorrentHelper,DIRECT
+- PROCESS-NAME,WebTorrentHelper.exe,DIRECT
+- PROCESS-NAME,Weiyun,DIRECT
+- PROCESS-NAME,Weiyun.exe,DIRECT
+- PROCESS-NAME,amuled,DIRECT
+- PROCESS-NAME,aria2c,DIRECT
+- PROCESS-NAME,aria2c.exe,DIRECT
+- PROCESS-NAME,baidunetdisk.exe,DIRECT
+- PROCESS-NAME,fdm,DIRECT
+- PROCESS-NAME,fdm.exe,DIRECT
+- PROCESS-NAME,qBittorrent,DIRECT
+- PROCESS-NAME,qbittorrent,DIRECT
+- PROCESS-NAME,qbittorrent.exe,DIRECT
+- PROCESS-NAME,transmission-daemon.exe,DIRECT
+- PROCESS-NAME,transmission-qt.exe,DIRECT
+- PROCESS-NAME,uTorrent,DIRECT
+- PROCESS-NAME,uTorrent.exe,DIRECT
+- IP-CIDR,11.102.6.5/32,DIRECT,no-resolve
+- IP-CIDR,101.102.103.56/32,DIRECT,no-resolve
+- IP-CIDR,1.0.0.1/32,DIRECT,no-resolve
+- IP-CIDR6,2606:4700:4700::1111/128,DIRECT,no-resolve
+- GEOIP,CN,DIRECT,no-resolve
+- MATCH,✊手动挡
